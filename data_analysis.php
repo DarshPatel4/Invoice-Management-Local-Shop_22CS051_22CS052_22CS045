@@ -29,6 +29,7 @@ while($row2 = mysqli_fetch_array($res2)) {
 <!DOCTYPE HTML>
 <html>
 <head>
+<link rel="stylesheet" href="data_analysis.css">
 <script>
 window.onload = function() {
  
@@ -78,10 +79,21 @@ monthChart.render();
 
 
 </script>
+
 </head>
 <body>
-<div id="productChartContainer" style="height: 400px; width: 49%; display: inline-block;"></div>
-<div id="monthChartContainer" style="height: 400px; width: 49%; display: inline-block;"></div>
+
+<div class="chart-section">
+    <div id="productChartContainer" class="chart-item">
+        <h3>Product-wise Sales</h3>
+        <!-- Chart will be rendered here -->
+    </div>
+
+    <div id="monthChartContainer" class="chart-item">
+        <h3>Month-wise Sales</h3>
+        <!-- Chart will be rendered here -->
+    </div>
+</div>
 <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </body>
 </html>

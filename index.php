@@ -166,11 +166,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-user-cog"></i> Data Analysis <i class="fas fa-caret-down"></i></a>
+                        <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-user-cog"></i> Sales Report <i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-content">
-                            <a href="data_analysis.php">Data Analysis</a>
+                            <a href="index.php?page=data_analysis">Sales Report</a>
                         </div>
-                    </li>
+        </li>
+
                 </ul>
             </nav>
         </aside>
@@ -202,7 +203,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     include 'system_users.php';
                 } elseif ($page == 'add_system_user') {
                     include 'add_system_user.php';
-                } else {
+                }  elseif ($page == 'data_analysis') {
+                    include 'data_analysis.php';
+                }
+                
+                
+                else {
                     echo "<h1>Page not found</h1>";
                 }
                 ?>
